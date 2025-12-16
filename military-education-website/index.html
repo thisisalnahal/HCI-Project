@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التربية العسكرية - جامعة طنطا</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages/home.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-logo">
+                <img src="assets/images/logos/tanta-logo.png" alt="جامعة طنطا">
+                <h1 class="header-title">التربية العسكرية - جامعة طنطا</h1>
+                <img src="assets/images/logos/military-logo.png" alt="التربية العسكرية">
+            </div>
+            
+            <button class="nav-toggle" aria-label="فتح القائمة">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link active">الرئيسية</a></li>
+                    <li><a href="pages/registration.html" class="nav-link">التسجيل</a></li>
+                    <li><a href="pages/upload-research.html" class="nav-link">رفع البحث</a></li>
+                    <li><a href="pages/exam.html" class="nav-link">الاختبار</a></li>
+                    <li><a href="pages/results.html" class="nav-link">النتائج</a></li>
+                    <li><a href="#contact" class="nav-link">تواصل معنا</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>مرحباً بك في بوابة التربية العسكرية</h1>
+                <p>سجّل في الدورة وأكمل متطلباتك بسهولة</p>
+                <div class="hero-buttons">
+                    <a href="pages/registration.html" class="btn btn-primary btn-lg">
+                        <i class="fas fa-user-plus"></i>
+                        سجّل الآن
+                    </a>
+                    <a href="pages/results.html" class="btn btn-secondary btn-lg">
+                        <i class="fas fa-search"></i>
+                        استعلم عن النتائج
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title">الخدمات الرئيسية</h2>
+            
+            <div class="services-slider">
+                <button class="slider-btn prev" aria-label="السابق">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                
+                <div class="services-wrapper">
+                    <div class="services-track" id="servicesTrack">
+                        <!-- Slide 1 -->
+                        <div class="services-slide active">
+                            <a href="pages/upload-research.html" class="service-card">
+                                <div class="service-icon">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                </div>
+                                <h3>رفع البحث</h3>
+                                <p>قم برفع بحثك المطلوب للمادة</p>
+                                <span class="service-link">ارفع <i class="fas fa-arrow-left"></i></span>
+                            </a>
+                            
+                            <a href="pages/exam.html" class="service-card">
+                                <div class="service-icon">
+                                    <i class="fas fa-clipboard-check"></i>
+                                </div>
+                                <h3>الاختبار</h3>
+                                <p>ادخل لأداء الاختبار الإلكتروني</p>
+                                <span class="service-link">ادخل <i class="fas fa-arrow-left"></i></span>
+                            </a>
+                            
+                            <a href="#instructions" class="service-card">
+                                <div class="service-icon">
+                                    <i class="fas fa-info-circle"></i>
+                                </div>
+                                <h3>التعليمات</h3>
+                                <p>تعرف على تعليمات الدورة</p>
+                                <span class="service-link">اقرأ <i class="fas fa-arrow-left"></i></span>
+                            </a>
+                            
+                            <a href="#lectures" class="service-card">
+                                <div class="service-icon">
+                                    <i class="fas fa-play-circle"></i>
+                                </div>
+                                <h3>المحاضرات</h3>
+                                <p>شاهد محاضرات الدورة</p>
+                                <span class="service-link">شاهد <i class="fas fa-arrow-left"></i></span>
+                            </a>
+                        </div>
+                        
+                        <!-- Slide 2 -->
+                        <div class="services-slide">
+                            <a href="#print-registration" class="service-card">
+                                <div class="service-icon">
+                                    <i class="fas fa-print"></i>
+                                </div>
+                                <h3>طباعة التسجيل</h3>
+                                <p>اطبع إيصال تسجيلك في الدورة</p>
+                                <span class="service-link">اطبع <i class="fas fa-arrow-left"></i></span>
+                            </a>
+                            
+                            <a href="#complaints" class="service-card">
+                                <div class="service-icon">
+                                    <i class="fas fa-comment-dots"></i>
+                                </div>
+                                <h3>الشكاوى والمقترحات</h3>
+                                <p>أرسل شكواك أو مقترحاتك</p>
+                                <span class="service-link">أرسل <i class="fas fa-arrow-left"></i></span>
+                            </a>
+                            
+                            <a href="#gallery" class="service-card">
+                                <div class="service-icon">
+                                    <i class="fas fa-images"></i>
+                                </div>
+                                <h3>ألبوم الصور</h3>
+                                <p>تصفح صور الدورات السابقة</p>
+                                <span class="service-link">تصفح <i class="fas fa-arrow-left"></i></span>
+                            </a>
+                            
+                            <a href="#awareness" class="service-card">
+                                <div class="service-icon">
+                                    <i class="fas fa-lightbulb"></i>
+                                </div>
+                                <h3>التوعية</h3>
+                                <p>محتوى توعوي ومعلومات مهمة</p>
+                                <span class="service-link">اقرأ <i class="fas fa-arrow-left"></i></span>
+                            </a>
+                        </div>
+                        
+                        <!-- Slide 3 -->
+                        <div class="services-slide">
+                            <a href="#views" class="service-card">
+                                <div class="service-icon">
+                                    <i class="fas fa-eye"></i>
+                                </div>
+                                <h3>المشاهدات</h3>
+                                <p>فيديوهات ومحتوى مرئي</p>
+                                <span class="service-link">شاهد <i class="fas fa-arrow-left"></i></span>
+                            </a>
+                            
+                            <a href="#october-war" class="service-card">
+                                <div class="service-icon">
+                                    <i class="fas fa-flag"></i>
+                                </div>
+                                <h3>حرب أكتوبر</h3>
+                                <p>تعرف على بطولات حرب أكتوبر</p>
+                                <span class="service-link">اقرأ <i class="fas fa-arrow-left"></i></span>
+                            </a>
+                            
+                            <a href="#female-students" class="service-card">
+                                <div class="service-icon">
+                                    <i class="fas fa-female"></i>
+                                </div>
+                                <h3>موقع الطالبات</h3>
+                                <p>خدمات خاصة بالطالبات</p>
+                                <span class="service-link">ادخلي <i class="fas fa-arrow-left"></i></span>
+                            </a>
+                            
+                            <a href="#contact" class="service-card">
+                                <div class="service-icon">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <h3>اتصل بنا</h3>
+                                <p>تواصل معنا لأي استفسار</p>
+                                <span class="service-link">تواصل <i class="fas fa-arrow-left"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="slider-btn next" aria-label="التالي">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+            </div>
+            
+            <div class="slider-dots">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Important Dates Section - Updated -->
+    <section class="dates">
+        <div class="container">
+            <h2 class="section-title">مواعيد مهمة</h2>
+            
+            <div class="dates-card">
+                <div class="date-item">
+                    <div class="date-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <div class="date-info">
+                        <span class="date-label">فترة التسجيل:</span>
+                        <span class="date-value">١ ديسمبر - ١٥ ديسمبر ٢٠٢٥</span>
+                    </div>
+                </div>
+                
+                <div class="date-item">
+                    <div class="date-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <div class="date-info">
+                        <span class="date-label">موعد الاختبار:</span>
+                        <span class="date-value">٢٠ ديسمبر ٢٠٢٥</span>
+                    </div>
+                </div>
+                
+                <div class="date-item">
+                    <div class="date-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <div class="date-info">
+                        <span class="date-label">إعلان النتائج:</span>
+                        <span class="date-value">٢٥ ديسمبر ٢٠٢٥</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section - Updated -->
+    <section class="news">
+        <div class="container">
+            <h2 class="section-title">آخر الأخبار</h2>
+            
+            <div class="news-list">
+                <article class="news-item">
+                    <div class="news-content">
+                        <h3>فتح باب التسجيل للدورة رقم 78 للتربية العسكرية</h3>
+                        <span class="news-date">١ ديسمبر ٢٠٢٥</span>
+                    </div>
+                    <a href="#" class="news-link">المزيد</a>
+                </article>
+                
+                <article class="news-item">
+                    <div class="news-content">
+                        <h3>قوات الدفاع الشعبي والعسكري تنظم الندوة التثقيفية ال77 للقوات المسلحة بالجامعات والمعاهد المصرية في جامعة طنطا</h3>
+                        <span class="news-date">٢٥ نوفمبر ٢٠٢٥</span>
+                    </div>
+                    <a href="#" class="news-link">المزيد</a>
+                </article>
+                
+                <article class="news-item">
+                    <div class="news-content">
+                        <h3>إعلان نتائج الدورة 77 للتربية العسكرية</h3>
+                        <span class="news-date">٢٠ نوفمبر ٢٠٢٥</span>
+                    </div>
+                    <a href="#" class="news-link">المزيد</a>
+                </article>
+            </div>
+            
+            <div class="news-footer">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-archive"></i>
+                    أرشيف الأخبار
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-contact">
+                <a href="mailto:military@unv.tanta.edu.eg">
+                    <i class="fas fa-envelope"></i>
+                    military@unv.tanta.edu.eg
+                </a>
+                <a href="tel:0403316068">
+                    <i class="fas fa-phone"></i>
+                    0403316068
+                </a>
+                <a href="#">
+                    <i class="fas fa-map-marker-alt"></i>
+                    التربية العسكرية, جامعة طنطا, طنطا, مصر
+                </a>
+            </div>
+            <p class="footer-copyright">
+                جميع الحقوق محفوظة © ٢٠٢٥ التربية العسكرية - جامعة طنطا
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/pages/home.js"></script>
+</body>
+</html>

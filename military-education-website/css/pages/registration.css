@@ -1,0 +1,281 @@
+/* === Registration Layout === */
+.registration-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--spacing-xl);
+    align-items: start;
+}
+
+/* === Form Card === */
+.form-card {
+    padding: var(--spacing-2xl);
+}
+
+/* === Form Steps === */
+.form-step {
+    display: none;
+}
+
+.form-step.active {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* === Input with Icon === */
+.input-with-icon {
+    position: relative;
+}
+
+.input-with-icon .form-input {
+    padding-left: 45px;
+}
+
+.input-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--gray-400);
+}
+
+.input-icon.success {
+    color: var(--success);
+}
+
+.input-icon.error {
+    color: var(--error);
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* === Course Options === */
+.course-options {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.course-option {
+    cursor: pointer;
+}
+
+.course-option input {
+    display: none;
+}
+
+.course-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--spacing-lg);
+    border: 2px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    transition: var(--transition-fast);
+}
+
+.course-option input:checked + .course-card {
+    border-color: var(--primary-green);
+    background-color: rgba(27, 94, 32, 0.05);
+}
+
+.course-option:hover .course-card {
+    border-color: var(--primary-green-light);
+}
+
+.course-option.disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.course-option.disabled .course-card {
+    background-color: var(--gray-100);
+}
+
+.course-name {
+    font-weight: 700;
+    color: var(--gray-900);
+}
+
+.course-date {
+    color: var(--gray-600);
+    font-size: var(--font-size-sm);
+}
+
+.course-status {
+    padding: var(--spacing-xs) var(--spacing-md);
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+}
+
+.course-status.available {
+    background-color: var(--success-light);
+    color: var(--primary-green);
+}
+
+.course-status.full {
+    background-color: var(--gray-200);
+    color: var(--gray-600);
+}
+
+/* === Confirmation Summary === */
+.confirmation-summary h3 {
+    margin-bottom: var(--spacing-lg);
+    color: var(--gray-900);
+}
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+    padding: var(--spacing-lg);
+    background-color: var(--gray-50);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.summary-item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.summary-item .label {
+    font-size: var(--font-size-sm);
+    color: var(--gray-600);
+}
+
+.summary-item .value {
+    font-weight: 600;
+    color: var(--gray-900);
+}
+
+/* === Checkbox Label === */
+.checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+    cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+    accent-color: var(--primary-green);
+}
+
+.checkbox-label span {
+    color: var(--gray-700);
+    line-height: 1.5;
+}
+
+/* === Form Actions === */
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-xl);
+    padding-top: var(--spacing-xl);
+    border-top: 1px solid var(--gray-200);
+}
+
+.form-actions .btn {
+    min-width: 140px;
+}
+
+/* === Instructions Card === */
+.instructions-card {
+    position: sticky;
+    top: 100px;
+}
+
+.instructions-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+}
+
+.instructions-list li {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    color: var(--gray-700);
+}
+
+.instructions-list li i {
+    color: var(--success);
+    font-size: var(--font-size-lg);
+}
+
+.video-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md);
+    background-color: var(--gray-100);
+    border-radius: var(--radius-md);
+    color: var(--gray-700);
+    font-weight: 600;
+    transition: var(--transition-fast);
+}
+
+.video-link:hover {
+    background-color: var(--gray-200);
+    color: var(--primary-green);
+}
+
+.video-link i {
+    font-size: var(--font-size-xl);
+}
+
+/* === Responsive === */
+@media (max-width: 992px) {
+    .registration-layout {
+        grid-template-columns: 1fr;
+    }
+    
+    .instructions-card {
+        position: static;
+        order: -1;
+    }
+}
+
+@media (max-width: 768px) {
+    .form-card {
+        padding: var(--spacing-lg);
+    }
+    
+    .summary-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .course-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-sm);
+    }
+    
+    .form-actions {
+        flex-direction: column;
+    }
+    
+    .form-actions .btn {
+        width: 100%;
+    }
+}

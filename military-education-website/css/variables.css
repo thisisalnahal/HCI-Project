@@ -1,0 +1,77 @@
+/* === المتغيرات الأساسية === */
+:root {
+    /* الألوان */
+    --primary-green: #1B5E20;
+    --primary-green-light: #2E7D32;
+    --primary-green-dark: #0D3D13;
+    --gold: #C6A135;
+    --gold-light: #D4B445;
+    --gold-dark: #A8891D;
+    
+    /* ألوان محايدة */
+    --white: #FFFFFF;
+    --gray-50: #FAFAFA;
+    --gray-100: #F5F5F5;
+    --gray-200: #EEEEEE;
+    --gray-300: #E0E0E0;
+    --gray-400: #BDBDBD;
+    --gray-500: #9E9E9E;
+    --gray-600: #757575;
+    --gray-700: #616161;
+    --gray-800: #424242;
+    --gray-900: #212121;
+    
+    /* ألوان الحالات */
+    --success: #4CAF50;
+    --success-light: #E8F5E9;
+    --error: #F44336;
+    --error-light: #FFEBEE;
+    --warning: #FF9800;
+    --warning-light: #FFF3E0;
+    --info: #2196F3;
+    --info-light: #E3F2FD;
+    
+    /* الخطوط */
+    --font-primary: 'Cairo', sans-serif;
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.25rem;
+    --font-size-2xl: 1.5rem;
+    --font-size-3xl: 1.875rem;
+    --font-size-4xl: 2.25rem;
+    
+    /* المسافات */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --spacing-2xl: 3rem;
+    --spacing-3xl: 4rem;
+    
+    /* الحدود */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    --radius-full: 50%;
+    
+    /* الظلال */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15);
+    
+    /* الانتقالات */
+    --transition-fast: 0.15s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+    
+    /* العرض الأقصى */
+    --max-width: 1200px;
+    --max-width-sm: 640px;
+    --max-width-md: 768px;
+    --max-width-lg: 1024px;
+}

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الاختبار - التربية العسكرية - جامعة طنطا</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/pages/exam.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-logo">
+                <img src="../assets/images/logos/tanta-logo.png" alt="جامعة طنطا">
+                <h1 class="header-title">التربية العسكرية - جامعة طنطا</h1>
+                <img src="../assets/images/logos/military-logo.png" alt="التربية العسكرية">
+            </div>
+            
+            <button class="nav-toggle" aria-label="فتح القائمة">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="../index.html" class="nav-link">الرئيسية</a></li>
+                    <li><a href="registration.html" class="nav-link">التسجيل</a></li>
+                    <li><a href="upload-research.html" class="nav-link">رفع البحث</a></li>
+                    <li><a href="exam.html" class="nav-link active">الاختبار</a></li>
+                    <li><a href="results.html" class="nav-link">النتائج</a></li>
+                    <li><a href="#contact" class="nav-link">تواصل معنا</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb">
+                <a href="../index.html">الرئيسية</a>
+                <span class="separator">‹</span>
+                <span class="current">الاختبار</span>
+            </nav>
+
+            <!-- Status Banner -->
+            <div class="status-banner open">
+                <i class="fas fa-check-circle"></i>
+                <span>الاختبار متاح الآن</span>
+            </div>
+
+            <!-- Exam Layout -->
+            <div class="exam-layout">
+                <!-- Login Form -->
+                <div class="card exam-login-card">
+                    <div class="card-header">
+                        <div class="icon">
+                            <i class="fas fa-sign-in-alt"></i>
+                        </div>
+                        <h2>دخول الاختبار</h2>
+                    </div>
+
+                    <form id="examLoginForm" class="exam-login-form">
+                        <!-- Course Select -->
+                        <div class="form-group">
+                            <label class="form-label" for="courseSelect">اختر الدورة</label>
+                            <select id="courseSelect" class="form-select" required>
+                                <option value="">اختر الدورة</option>
+                                <option value="78">دورة 78 - ديسمبر 2025</option>
+                                <option value="77">دورة 77 - نوفمبر 2025</option>
+                                <option value="76">دورة 76 - أكتوبر 2025</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="examNationalId">الرقم القومي</label>
+                            <input 
+                                type="text" 
+                                id="examNationalId" 
+                                class="form-input" 
+                                placeholder="الرقم القومي"
+                                maxlength="14"
+                                required
+                            >
+                            <small class="form-hint">الرقم القومي المراجع والمحل في المسار و البطاقة</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="examCode">كود الاختبار</label>
+                            <input 
+                                type="text" 
+                                id="examCode" 
+                                class="form-input" 
+                                placeholder="كود الاختبار"
+                                required
+                            >
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block btn-lg">
+                            <i class="fas fa-play"></i>
+                            ابدأ الاختبار
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Exam Info -->
+                <div class="exam-info-section">
+                    <!-- Exam Details Card -->
+                    <div class="card exam-details-card">
+                        <div class="card-header">
+                            <div class="icon" style="background-color: var(--gold);">
+                                <i class="fas fa-info"></i>
+                            </div>
+                            <h3>معلومات الاختبار</h3>
+                        </div>
+
+                        <div class="exam-stats">
+                            <div class="stat-item">
+                                <div class="stat-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <span class="stat-label">درجة النجاح:</span>
+                                    <span class="stat-value">50%</span>
+                                </div>
+                            </div>
+                            
+                            <div class="stat-item">
+                                <div class="stat-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <span class="stat-label">المدة:</span>
+                                    <span class="stat-value">50 دقيقة</span>
+                                </div>
+                            </div>
+                            
+                            <div class="stat-item">
+                                <div class="stat-icon">
+                                    <i class="fas fa-edit"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <span class="stat-label">عدد الأسئلة:</span>
+                                    <span class="stat-value">50 سؤال</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Before Exam Card -->
+                    <div class="card before-exam-card">
+                        <div class="card-header">
+                            <div class="icon" style="background-color: var(--info);">
+                                <i class="fas fa-clipboard-list"></i>
+                            </div>
+                            <h3>قبل بدء الاختبار</h3>
+                        </div>
+
+                        <ul class="checklist">
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>أحضر بطاقة الرقم القومي</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>تأكد من رفع البحث مسبقاً</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>استخدم جهاز كمبيوتر أو لابتوب</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>تأكد من اتصال الإنترنت</span>
+                            </li>
+                        </ul>
+
+                        <a href="#" class="video-link">
+                            <i class="fas fa-play-circle"></i>
+                            شاهد فيديو التعليمات
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tips Section -->
+            <section class="exam-tips">
+                <h2 class="section-title">نصائح مهمة أثناء الاختبار</h2>
+                
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <div class="icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h4>راقب الوقت المتبقي</h4>
+                        <p>تابع العداد الزمني لإدارة وقتك بشكل فعال</p>
+                    </div>
+                    
+                    <div class="tip-card">
+                        <div class="icon">
+                            <i class="fas fa-ban"></i>
+                        </div>
+                        <h4>لا يمكن العودة للسؤال السابق</h4>
+                        <p>تأكد من إجابتك قبل الانتقال للسؤال التالي</p>
+                    </div>
+                    
+                    <div class="tip-card">
+                        <div class="icon">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <h4>لا تغلق المتصفح أثناء الاختبار</h4>
+                        <p>إغلاق المتصفح قد يؤدي لفقدان التقدم</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+<!-- Footer -->
+<footer class="footer" id="contact">
+    <div class="container">
+        <div class="footer-contact">
+            <a href="mailto:military@unv.tanta.edu.eg">
+                <i class="fas fa-envelope"></i>
+                military@unv.tanta.edu.eg
+            </a>
+            <a href="tel:0403316068">
+                <i class="fas fa-phone"></i>
+                0403316068
+            </a>
+            <a href="#">
+                <i class="fas fa-map-marker-alt"></i>
+                التربية العسكرية, جامعة طنطا, طنطا, مصر
+            </a>
+        </div>
+        <p class="footer-copyright">
+            جميع الحقوق محفوظة © ٢٠٢٥ التربية العسكرية - جامعة طنطا
+        </p>
+    </div>
+</footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/validation.js"></script>
+    <script src="../js/pages/exam.js"></script>
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>النتائج - التربية العسكرية - جامعة طنطا</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/pages/results.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-logo">
+                <img src="../assets/images/logos/tanta-logo.png" alt="جامعة طنطا">
+                <h1 class="header-title">التربية العسكرية - جامعة طنطا</h1>
+                <img src="../assets/images/logos/military-logo.png" alt="التربية العسكرية">
+            </div>
+            
+            <button class="nav-toggle" aria-label="فتح القائمة">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="../index.html" class="nav-link">الرئيسية</a></li>
+                    <li><a href="registration.html" class="nav-link">التسجيل</a></li>
+                    <li><a href="upload-research.html" class="nav-link">رفع البحث</a></li>
+                    <li><a href="exam.html" class="nav-link">الاختبار</a></li>
+                    <li><a href="results.html" class="nav-link active">النتائج</a></li>
+                    <li><a href="#contact" class="nav-link">تواصل معنا</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb">
+                <a href="../index.html">الرئيسية</a>
+                <span class="separator">‹</span>
+                <span class="current">النتائج</span>
+            </nav>
+
+            <!-- Page Header -->
+            <div class="page-header">
+                <h1>الاستعلام عن النتائج</h1>
+                <p>أدخل الرقم القومي للاستعلام عن نتيجة الدورة وطباعة إخلاء الطرف</p>
+            </div>
+
+            <!-- Search Section -->
+            <div class="search-section">
+                <div class="card search-card">
+                    <div class="card-header">
+                        <div class="header-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h2>البحث عن النتيجة</h2>
+                    </div>
+
+                    <form id="searchForm" class="search-form">
+                        <div class="form-group">
+                            <label class="form-label" for="resultNationalId">الرقم القومي</label>
+                            <div class="input-wrapper">
+                                <input 
+                                    type="text" 
+                                    id="resultNationalId" 
+                                    class="form-input" 
+                                    placeholder="أدخل الرقم القومي المكون من 14 رقم"
+                                    maxlength="14"
+                                    autocomplete="off"
+                                    required
+                                >
+                                <span class="input-status" id="inputStatus"></span>
+                            </div>
+                            <small class="form-hint">الرقم القومي مكون من 14 رقم كما في البطاقة</small>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-lg btn-block" id="searchBtn">
+                            <i class="fas fa-search"></i>
+                            بحث
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Result Section -->
+            <div class="result-section hidden" id="resultSection">
+                <!-- Success Result -->
+                <div class="result-card success hidden" id="resultSuccess">
+                    <div class="result-header">
+                        <div class="result-status">
+                            <i class="fas fa-check-circle"></i>
+                            <span>تم العثور على النتيجة</span>
+                        </div>
+                    </div>
+
+                    <div class="result-body">
+                        <div class="result-grid">
+                            <div class="result-item">
+                                <span class="item-label">الاسم</span>
+                                <span class="item-value" id="resultName">-</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="item-label">الكلية</span>
+                                <span class="item-value" id="resultFaculty">-</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="item-label">الدورة</span>
+                                <span class="item-value" id="resultCourse">-</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="item-label">الدرجة</span>
+                                <span class="item-value" id="resultGrade">-</span>
+                            </div>
+                            <div class="result-item highlight" id="resultStatusContainer">
+                                <span class="item-label">النتيجة</span>
+                                <span class="item-value" id="resultStatus">-</span>
+                            </div>
+                        </div>
+
+                        <div class="result-actions">
+                            <button class="btn btn-primary" id="btnDownloadPdf">
+                                <i class="fas fa-file-pdf"></i>
+                                تحميل PDF
+                            </button>
+                            <button class="btn btn-gold" id="btnPrint">
+                                <i class="fas fa-print"></i>
+                                طباعة إخلاء الطرف
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Not Found Result -->
+<div class="result-card error hidden" id="resultNotFound">
+    <div class="result-header">
+        <div class="result-status">
+            <i class="fas fa-times-circle"></i>
+            <span>لم يتم العثور على نتيجة</span>
+        </div>
+    </div>
+
+    <div class="result-body">
+        <div class="not-found-content">
+            <div class="error-icon">
+                <i class="fas fa-search"></i>
+            </div>
+            <p class="error-message">
+                لم يتم العثور على نتيجة لهذا الرقم القومي
+            </p>
+            <ul class="error-list">
+                <li>تأكد من صحة الرقم القومي</li>
+                <li>تأكد أنك مسجل في إحدى الدورات</li>
+                <li>قد تكون النتائج لم تُعلن بعد</li>
+            </ul>
+        </div>
+    </div>
+</div>
+            </div>
+
+            <!-- Important Notes -->
+            <section class="notes-section">
+                <h2 class="section-title">ملاحظات مهمة</h2>
+                
+                <div class="notes-grid">
+                    <div class="note-card">
+                        <div class="note-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h4>موعد إعلان النتائج</h4>
+                        <p>النتائج تظهر بعد 48 ساعة من انتهاء الدورة</p>
+                    </div>
+                    
+                    <div class="note-card">
+                        <div class="note-icon">
+                            <i class="fas fa-print"></i>
+                        </div>
+                        <h4>إخلاء الطرف</h4>
+                        <p>اطبع إخلاء الطرف وقدمه لمكتب التربية العسكرية</p>
+                    </div>
+                    
+                    <div class="note-card">
+                        <div class="note-icon">
+                            <i class="fas fa-question-circle"></i>
+                        </div>
+                        <h4>هل تواجه مشكلة؟</h4>
+                        <p>تواصل معنا عبر البريد الإلكتروني أو الهاتف</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-contact">
+                <a href="mailto:military@unv.tanta.edu.eg">
+                    <i class="fas fa-envelope"></i>
+                    military@unv.tanta.edu.eg
+                </a>
+                <a href="tel:0403316068">
+                    <i class="fas fa-phone"></i>
+                    0403316068
+                </a>
+                <a href="#">
+                    <i class="fas fa-map-marker-alt"></i>
+                    التربية العسكرية, جامعة طنطا, طنطا, مصر
+                </a>
+            </div>
+            <p class="footer-copyright">
+                جميع الحقوق محفوظة © 2025 التربية العسكرية - جامعة طنطا
+            </p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/pages/results.js"></script>
+</body>
+</html>
